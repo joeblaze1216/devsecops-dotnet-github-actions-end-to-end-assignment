@@ -47,6 +47,7 @@ jobs:
          uses: snyk/actions/node@master
          continue-on-error: true
          env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   zap_scan:
      runs-on: ubuntu-latest
